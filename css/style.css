@@ -20,6 +20,7 @@ div {
 	height: 550px;
 	max-width: 535px;
 	padding: 0 30px;
+	position: relative;
 }
 
 .album_title {
@@ -29,31 +30,11 @@ div {
 
 .photos{
 	display: flex;
+	justify-content: center;
 	flex-wrap: wrap;
 	overflow: auto;
 	height: 515px;
 
-}
-.photos::-webkit-scrollbar{
-    width:15px;
-}
-
-.photos::-webkit-scrollbar-thumb{
-    border-width:1px 1px 1px 2px;
-    border-color: #777;
-    background-color: #aaa;
-}
-.photos::-webkit-scrollbar-thumb:hover{
-    border-width: 1px 1px 1px 2px;
-    border-color: #555;
-    background-color: #777;
-}
-.photos::-webkit-scrollbar-track{
-    border-width:0;
-}
-.photos::-webkit-scrollbar-track:hover{
-    border-left: solid 1px #aaa;
-    background-color: #eee;
 }
 
 .album_photo {
@@ -72,7 +53,7 @@ div {
 
 .prev_button,
 .next_button {
-	position: relative;
+	position: absolute;
     display: inline-block;
     width: 30px;
     height: 100%;
@@ -82,11 +63,11 @@ div {
 	transform: translate(0,-100%);
 }
 .prev_button{
-	right: 30px;
+	left: 0px;
 }
 
 .next_button {
-	left: 500px;
+	right: 0px;
 }
 
 .prev_button:hover,
@@ -128,11 +109,27 @@ div {
     transform: translate(0, 50%) rotate(25deg);
 }
 
-#songs-list {
-border: 1px solid #000;
-border-collapse: collapse;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width : 768px) {
+	.wrap {
+		margin: 0;
+	}
+
 }
-#songs-list td {
-border: 1px solid #000;
-}
+
+
 
