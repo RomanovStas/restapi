@@ -10,21 +10,25 @@
 <body>
 	<main>
 		<div class="wrap">
+			<div class="container">
 
-			<div class="album">
-				<div class="album_title">Album Title</div>
-
-					<div class="photos" id="almums-list">
-
+				<div class="album fade">
+					<div class="album_title">Album Title 0</div>
+				    <div class="photos" id="almums-list"></div>
 				</div>
-				<div class="prev_button"></div>
-				<div class="next_button"></div>
 
+				<div class="album fade">
+					<div class="album_title">Album Title 1</div>
+				    <div class="photos" id="almums-list"></div>
+				</div>
+
+				<div class="prev_button" onclick="plusSlides(-1)"></div>
+				<div class="next_button" onclick="plusSlides(1)"></div>
+			
 			</div>
-
 		</div>
-
 	</main>
+
 
 
 <template id="album-tpl">
@@ -36,8 +40,6 @@
 </template>
 
 
-
-<!-- 	<script src="js/jquery-3.3.1.min.js"></script> -->
 
 	<script src="js/script.js"></script>
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>

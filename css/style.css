@@ -7,20 +7,21 @@ body{
 	font-family: 'Open Sans', sans-serif;
 }
 
-div {
-	
-}
-
 .wrap {
 	margin: 20px 80px;
 }
 
-.album{
-	margin: 0 auto;
+.container {
+	max-width: 595px;
 	height: 550px;
-	max-width: 535px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.album{
 	padding: 0 30px;
 	position: relative;
+	display: none;
 }
 
 .album_title {
@@ -44,11 +45,6 @@ div {
 	margin: 10px;
 	text-align: center;
 	border: 1px solid #222;
-}
-
-.album_scroll {
-	height: auto;
-
 }
 
 .prev_button,
@@ -88,31 +84,43 @@ div {
 }
 
 .prev_button:before {
-    top: 250px;
-    transform: translate(0,-50%) rotate(25deg);
+    top: 50%;
+    transform: translate(0,-44%) rotate(25deg);
 }
 
 .prev_button:after {
-    top: 244px;
-    transform: translate(0, 50%) rotate(-25deg);
+    top: 50%;
+    transform: translate(0, 44%) rotate(-25deg);
 }
 
 .next_button:before {
-    top: 250px;
+    top: 50%;
     left: 14px;
-    transform: translate(0,-50%) rotate(-25deg);
+    transform: translate(0,-44%) rotate(-25deg);
 }
 
 .next_button:after {
-    top: 244px;
+    top: 50%;
     left: 14px;
-    transform: translate(0, 50%) rotate(25deg);
+    transform: translate(0, 44%) rotate(25deg);
 }
 
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
 
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
 
-
-
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
 
 
 
