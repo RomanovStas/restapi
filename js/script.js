@@ -25,7 +25,8 @@ fetch('http://jsonplaceholder.typicode.com/albums/1/photos').then(function(respo
 
     albums.forEach(function(album) {
 	  var renderedRow = render('album-tpl', album);
-	  document.getElementById('almums-list').appendChild( renderedRow );
+    var photoList = document.getElementsByClassName('photos')[0];
+	  photoList.appendChild( renderedRow );
 	});
 
 	// render template
@@ -47,5 +48,6 @@ fetch('http://jsonplaceholder.typicode.com/albums/1/photos').then(function(respo
 
   });
 }).catch(err => console.log('Error: ${err}'));
+
 
 

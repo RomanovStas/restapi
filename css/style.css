@@ -132,6 +132,7 @@ body{
 
 
 
+
 @media only screen and (max-width : 768px) {
 	.wrap {
 		margin: 0;
@@ -139,5 +140,30 @@ body{
 
 }
 
+
+
+.menu ul {
+  display: none;
+  margin: 0;
+}
+
+.menu .title {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.menu .title:before {
+  content: '▶';
+  padding-right: 6px;
+  color: green;
+}
+
+.menu.open ul {
+  display: block;
+}
+
+.menu.open .title:before {
+  content: '▼';
+}
 
 
