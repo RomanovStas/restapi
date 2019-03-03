@@ -12,12 +12,14 @@ function showSlides(n) {
   if (n > slides.length) {slideIndex = 1} 
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none"; 
+      slides[i].classList.remove("vision"); 
   }
-
-  slides[slideIndex-1].style.display = "block"; 
+  slides[slideIndex-1].classList.add("vision"); 
 
 }
+
+
+
 
 fetch('http://jsonplaceholder.typicode.com/albums/1/photos').then(function(response) {
 
@@ -51,3 +53,7 @@ fetch('http://jsonplaceholder.typicode.com/albums/1/photos').then(function(respo
 
 
 
+
+fetch('https://jsonplaceholder.typicode.com/albums/1/photos')
+  .then(response => response.json())
+  .then(json => console.log(json))
