@@ -52,8 +52,3 @@ fetch('http://jsonplaceholder.typicode.com/albums/1/photos').then(function(respo
 }).catch(err => console.log('Error: ${err}'));
 
 
-
-
-fetch('https://jsonplaceholder.typicode.com/albums/1/photos')
-  .then(response => response.json())
-  .then(json => console.log(json))
