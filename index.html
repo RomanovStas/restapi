@@ -3,10 +3,14 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=0.8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Rest API</title>
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/skeleton.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" type="image/png" href="img/favicon.png">
 </head>
 <body>
 	<main>
@@ -29,14 +33,61 @@
 			</div>
 		</div>
 
+			<div class="container block_test" style="border: 1px solid;">				
+				<div class="row btn">
+					<button id="btn" class="button-primary">
+						Получить
+					</button>						
+				</div>
+				<div class="row">
+					<div class="photos" id="cardDiv">
+						
+					</div>
+				</div>
+			</div>
+
 
 	</main>
+
+
+<script>
+	var slideIndex = 1;
+	showSlides(slideIndex);
+
+	function plusSlides(n) {
+	  showSlides(slideIndex += n);
+	}
+
+	function showSlides(n) {
+	  var i;
+	  var slides = document.getElementsByClassName("album");
+
+	  if (n > slides.length) {slideIndex = 1} 
+	  if (n < 1) {slideIndex = slides.length}
+	  for (i = 0; i < slides.length; i++) {
+	      slides[i].classList.remove("vision"); 
+	  }
+	  slides[slideIndex-1].classList.add("vision"); 
+
+	}	
+
+
+
+
+
+
+	
+</script>
+
+
+
+
 
 
 
 <template id="album-tpl">
 	<div class="album_photo">
-		<a href="{url}">
+		<a class="1photo" href="{url}">
 			<img src="{thumbnailUrl}" alt="{title}">
 		</a>
 	</div>
@@ -44,7 +95,12 @@
 
 
 
+
+
 	<script src="js/script.js"></script>
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
 </html>
+
+
+

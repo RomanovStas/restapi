@@ -18,9 +18,6 @@ function showSlides(n) {
 
 }
 
-
-
-
 fetch('http://jsonplaceholder.typicode.com/albums/1/photos').then(function(response) {
 
   response.json().then(function(albums){
@@ -50,5 +47,6 @@ fetch('http://jsonplaceholder.typicode.com/albums/1/photos').then(function(respo
 
   });
 }).catch(err => console.log('Error: ${err}'));
+
 
 
